@@ -1,17 +1,26 @@
 // Typing effect for my name.
 var i = 0;
-var txt = " Nathan Yu"
-var speed = 100;
+var txt = " Nathan Yu";
+var header = document.getElementById("header");
+header.innerHTML = "";
+var cursor = true;
 
-function typeWriter() {
-    if (i < txt.length) {
-        document.getElementById("header").innerHTML += txt.charAt(i);
+var typeWriter = setInterval(function() {
         i += 1;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-typeWriter();
+        header.innerHTML = "> " + txt.slice(0, i);
+        if (i == txt.length) {
+            clearInterval(typeWriter);
+            setInterval(function() {
+                if (cursor) {
+                    header.innerHTML = "> " + txt + "\u25AE";
+                    cursor = false;
+                } else {
+                    header.innerHTML = "> " + txt;
+                    cursor = true;
+                };
+            }, 530);
+        };
+}, 100);
 
 // Erasing leading whitespace from pre HTML block. SRC: https://stackoverflow.com/questions/17257200/removing-leading-whitespace-from-indented-html-source-in-pre-code-tags/26230865
 [].forEach.call(document.querySelectorAll('code'), function($code) {
