@@ -1,6 +1,7 @@
 @media screen and (max-width: 481px) {
     #content {
         min-width: 480px;
+        max-width: 480px;
     }
 }
 
