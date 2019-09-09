@@ -41,11 +41,10 @@ code {
 .links {
     border: 1px solid white;
     padding: 40px 0px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
     text-align: center;
+    top: 158px;
+    width: 100%;
 }
 
 .links a {
