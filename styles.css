@@ -24,6 +24,11 @@ html {
     margin-left: 10%;
 }
 
+#name {
+    font-weight: 900;
+    font-style: italic;
+}
+
 pre {
     margin-left: 10%;
     font-size: 1.2em;
@@ -36,8 +41,10 @@ code {
 .links {
     border: 1px solid white;
     padding: 40px 0px;
-    position: relative;
-    top: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     text-align: center;
 }
 
@@ -52,7 +59,7 @@ code {
     font-weight: 900;
 }
 
-a:hover {
+.links a:hover {
     background-color: white;
     border: 1px solid red;
     color: red;
