@@ -10,6 +10,11 @@ html {
     background-color: black;
 }
 
+#content {
+    min-width: 1500px;
+    max-width: 100%;
+}
+
 #header {
     display: inline-block;
     font-size: 2.5em;
@@ -34,7 +39,6 @@ code {
     position: relative;
     top: 180px;
     text-align: center;
-    width: 100%;
 }
 
 .links a {
