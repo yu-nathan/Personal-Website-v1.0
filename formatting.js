@@ -1,6 +1,6 @@
 // Typing effect for my name.
 var i = 0;
-var txt = " Nathan Yu";
+var txt = "HelloWorld!";
 var header = document.getElementById("header");
 header.innerHTML = "";
 var cursor = true;
