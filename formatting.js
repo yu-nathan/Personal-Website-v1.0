@@ -1,28 +1,28 @@
-// Typing effect for my name.
+// Typing effect for my header.
 var i = 0;
 var txt = "Hello World!";
 var header = document.getElementById("header");
-header.innerHTML = "";
 var cursor = true;
 
-var typeWriter = setInterval(function() {
+var typing = setInterval(function() {
         i += 1;
-        header.innerHTML = "> " + txt.slice(0, i);
+        header.innerHTML = "C:\\Users\\nat> " + txt.slice(0, i);
         if (i == txt.length) {
-            clearInterval(typeWriter);
+            clearInterval(typing);
             setInterval(function() {
                 if (cursor) {
-                    header.innerHTML = "> " + txt + "\u25AE";
+                    header.innerHTML = "C:\\Users\\nat> " + txt + "\u25AE";
                     cursor = false;
                 } else {
-                    header.innerHTML = "> " + txt;
+                    header.innerHTML = "C:\\Users\\nat> " + txt;
                     cursor = true;
                 };
             }, 530);
         };
 }, 100);
 
-// Erasing leading whitespace from pre HTML block. SRC: https://stackoverflow.com/questions/17257200/removing-leading-whitespace-from-indented-html-source-in-pre-code-tags/26230865
+// Erasing leading whitespace from pre HTML block.
+// SRC: https://stackoverflow.com/questions/17257200/removing-leading-whitespace-from-indented-html-source-in-pre-code-tags/26230865
 [].forEach.call(document.querySelectorAll('code'), function($code) {
     var lines = $code.innerHTML.split('\n');
 
